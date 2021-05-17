@@ -3,4 +3,5 @@ version: 0.2
 phases:
   build:
     commands:
-      - for file in $(ls test_files/); do docker build -t image_${file} -f test_files/${file} .; done
+      - docker build -t image_python -f test_files/python .
+      - docker build -t image_openjdk -f test_files/openjdk .
