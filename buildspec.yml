@@ -1,0 +1,6 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - for file in $(ls test_files/); do docker build -t image_${file} -f test_files/${file} .; done
