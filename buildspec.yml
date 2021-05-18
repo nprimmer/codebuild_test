@@ -5,8 +5,8 @@ phases:
     runtime-versions:
       docker: 19
     commands:
-      - docker pull python:3.5
-      - docker pull openjdk:latest
+      - nohup /usr/local/bin/dockerd --host=unix:///var/run/docker.sock --host=tcp://127.0.0.1:2375 &
+      - sleep 60
   build:
     commands:
       - docker build -t image_python -f test_files/python .
