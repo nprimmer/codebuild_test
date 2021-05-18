@@ -5,7 +5,6 @@ phases:
     runtime-versions:
       docker: 19
     commands:
-      - nohup /usr/local/bin/dockerd --host=unix:///var/run/docker.sock --host=tcp://127.0.0.1:2375 &
       - sleep 60
   build:
     commands:
