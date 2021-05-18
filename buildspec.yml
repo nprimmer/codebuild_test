@@ -10,3 +10,4 @@ phases:
     commands:
       - docker build -t image_python -f test_files/python .
       - docker build -t image_openjdk -f test_files/openjdk .
+      - docker run image_python
